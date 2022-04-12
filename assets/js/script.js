@@ -2,7 +2,7 @@ var apiKey = "bf427759ff67094eeac5d4fe62785bc5";
 
 var citySearch = document.querySelector('.citySearch')
 
-
+weatherApiurl = "http://api.openweathermap.org/geo/1.0/direct?=&q=miami&appid=bf427759ff67094eeac5d4fe62785bc5"
 
 function text(){
 
@@ -30,4 +30,18 @@ fetch("http://api.openweathermap.org/geo/1.0/direct?=&q=miami&appid=bf427759ff67
   console.error(err);
 });
 }
-text()
+text();
+
+
+function getApi(){
+fetch(weatherApiurl)
+.then(function(response){
+    response.json()
+ })
+ .then(function(data){
+     console.log(data);
+     for (let i = 0; i < data.length; index++) {
+
+     }
+ })
+}
