@@ -76,7 +76,7 @@ function text(lat, lon) {
 }
 
 function getData(cityName) {
-	let weatherApiurl = `http://api.openweathermap.org/geo/1.0/direct?=&q=${cityName}&appid=bf427759ff67094eeac5d4fe62785bc5`;
+	let weatherApiurl = `https://api.openweathermap.org/geo/1.0/direct?=&q=${cityName}&appid=bf427759ff67094eeac5d4fe62785bc5`;
 	// citySearch.textContent = document.getElementById('citySearch')
 	fetch(weatherApiurl)
 		.then((response) => {
