@@ -1,3 +1,77 @@
-.container {
+/* .container {
     margin-top: 5% !important;
+}
+
+
+.header{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color:rgb(231, 57, 57);
+    margin-bottom: 15px;
+    padding-bottom: 50px;
+    height: 155px;
+   
+    
+} */
+
+/* .card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px !important;
+}
+.card-body{
+    height: 300px;
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-card {
+  display: grid;
+  grid-template-columns: 250px 200px;
+  align-items: center;
+}
+.cards {
+  border: 2px solid black;
+  width: 400px;
+  height: 522px;
+}
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.grid-2-cards {
+  display: grid;
+  grid-template-columns: 400px 300px;
+  margin-left: 200px;
+  column-gap: 3px;
+}
+.weather-card {
+  text-align: center;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  width: 300px;
+}
+.header-card {
+  text-align: center;
+  margin-top: 100px;
+}
+.header-label {
+  text-transform: uppercase;
 }

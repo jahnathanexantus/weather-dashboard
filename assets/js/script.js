@@ -25,8 +25,8 @@ let day5temp = document.getElementById('day5temp');
 let day5wind = document.getElementById('day5wind');
 let day5humid= document.getElementById('day5humid');
 var dayjsObject = dayjs();
-var crntDate = dayjsObject.format("MM DD YYYY");
-let currentDate = document.getElementById('crntday');
+var crntDate = dayjsObject.format("  MM DD YYYY");
+let currentDate = document.getElementById('crntday')
 let dayOne  = document.getElementById('day1date');
 let dayTwo  = document.getElementById('day2date');
 let dayThree  = document.getElementById('day3date');
@@ -35,6 +35,9 @@ let dayFive  = document.getElementById('day5date');
 dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
 
+
+
+
 function text(lat, lon) {
 	let dataUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=bf427759ff67094eeac5d4fe62785bc5`;
 	console.log(dataUrl);
@@ -42,7 +45,7 @@ function text(lat, lon) {
 	fetch(dataUrl).then((response) => {
 		return response.json();
 	})
-  .then((response)=>{
+	.then((response)=>{
     console.log(response);
 	
 	temp.innerHTML = 'temperature: '+response.current.temp;
@@ -66,7 +69,7 @@ function text(lat, lon) {
 	day5temp.innerHTML = 'temperature:'+response.daily[5].temp.day; 
 	day5wind.innerHTML = 'wind:'+response.daily[5].wind_speed; 
 	day5humid.innerHTML = 'humidity:'+response.daily[5].humidity;
-	currentDate.innerHTML = crntDate;
+	currentDate.innerHTML = "Date: " + crntDate
 	dayOne.innerHTML = dayjs().add(1,"day").format("MM DD YYYY");
 	dayTwo.innerHTML = dayjs().add(2,"day").format("MM DD YYYY");
 	dayThree.innerHTML = dayjs().add(3,"day").format("MM DD YYYY");
@@ -95,9 +98,9 @@ function searchBar(event) {
 	event.preventDefault();
 	var citySearch = document.getElementById("citySearch");
 	let userInput = citySearch.value.trim();
-
-	getData(userInput);
 	console.log(userInput);
-	
+	getData(userInput);	
 }
+
+
 submitBtn.addEventListener("click", searchBar);
