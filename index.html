@@ -19,23 +19,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/plugin/timezone.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
+    <title>Weather Dashboard</title>
   </head>
   <body>
     <header>
-      <h1 class="header-label">weather dashboard</h1>
+      <h1 class="header-label">Weather Dashboard</h1>
       <div>
-        <h2>search for a city</h2>
+        <h2>Search for a city</h2>
         <div>
           <input type="text" placeholder="ENTER CITY" id="citySearch" />
-          <button
-            id="submitt-Btn"
-            type="submit"
-            fa
-            fa-search
-            class="citySearch"
-          >
-            click
+          <button id="submitt-Btn" type="submit" class="citySearch">
+            Click
           </button>
         </div>
       </div>
@@ -45,39 +39,37 @@
       The new technology of weather tracking
     </h5>
     <div class="section">
-      <div class="cards">
-        <h3>today's weather</h3>
-        <div class="main-card">
-          <p id="temp">temperature:</p>
-          <p id="wind">wind:</p>
-          <p id="humid">humidity:</p>
-          <p id="uv">uv:</p>
-        </div>
+      <div class="main-card">
+        <h3>Today's Weather</h3>
+        <p id="temp">Temperature:</p>
+        <p id="wind">Wind:</p>
+        <p id="humid">Humidity:</p>
+        <p id="uv">UV:</p>
       </div>
       <div class="grid-2-cards">
         <div class="weather-card">
-          <p><span>day-1 weather forcast</span></p>
-          <p id="day1temp">temperature</p>
-          <p id="day1wind">wind</p>
-          <p id="day1humid">humidity</p>
+          <p><span>Day 1 Weather Forecast</span></p>
+          <p id="day1temp">Temperature</p>
+          <p id="day1wind">Wind</p>
+          <p id="day1humid">Humidity</p>
         </div>
         <div class="weather-card">
-          <p><span>day-2 weather forcast</span></p>
-          <p id="day2temp">temperature</p>
-          <p id="day2wind">wind</p>
-          <p id="day2humid">humidity</p>
+          <p><span>Day 2 Weather Forecast</span></p>
+          <p id="day2temp">Temperature</p>
+          <p id="day2wind">Wind</p>
+          <p id="day2humid">Humidity</p>
         </div>
         <div class="weather-card">
-          <p><span>day-3 weather forcast</span></p>
-          <p id="day3temp">temperature</p>
-          <p id="day3wind">wind</p>
-          <p id="day3humid">humidity</p>
+          <p><span>Day 3 Weather Forecast</span></p>
+          <p id="day3temp">Temperature</p>
+          <p id="day3wind">Wind</p>
+          <p id="day3humid">Humidity</p>
         </div>
         <div class="weather-card">
-          <p><span>day-4 weather forcast</span></p>
-          <p id="day4temp">temperature</p>
-          <p id="day4wind">wind</p>
-          <p id="day4humid">humidity</p>
+          <p><span>Day 4 Weather Forecast</span></p>
+          <p id="day4temp">Temperature</p>
+          <p id="day4wind">Wind</p>
+          <p id="day4humid">Humidity</p>
         </div>
       </div>
     </div>

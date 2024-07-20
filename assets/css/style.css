@@ -1,77 +1,138 @@
-/* .container {
-    margin-top: 5% !important;
-}
-
-
-.header{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color:rgb(231, 57, 57);
-    margin-bottom: 15px;
-    padding-bottom: 50px;
-    height: 155px;
-   
-    
-} */
-
-/* .card-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px !important;
-}
-.card-body{
-    height: 300px;
-} */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* General Styles */
 body {
-  font-family: sans-serif;
+  margin: 0;
   font-family: "Inter", sans-serif;
-  margin-left: 20px;
-  margin-right: 20px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
+
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 10px;
 }
-.main-card {
-  display: grid;
-  grid-template-columns: 250px 200px;
-  align-items: center;
+
+.header-label {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #f0f0f0;
 }
-.cards {
-  border: 2px solid black;
-  width: 400px;
-  height: 522px;
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 10px 0;
 }
+
+input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 1em;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+.header-card {
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
 .section {
+  padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  flex: 1;
   justify-content: center;
-  margin-top: 100px;
+  overflow: hidden;
 }
+
+.main-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.main-card p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
 .grid-2-cards {
   display: grid;
-  grid-template-columns: 400px 300px;
-  margin-left: 200px;
-  column-gap: 3px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
 }
+
 .weather-card {
-  text-align: center;
-  border: 2px solid black;
-  margin-bottom: 20px;
-  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.header-card {
-  text-align: center;
-  margin-top: 100px;
+
+.weather-card p {
+  margin: 5px 0;
+  font-size: 1em;
 }
-.header-label {
-  text-transform: uppercase;
+
+.weather-card span {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-2-cards {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  .section {
+    padding: 10px;
+  }
+
+  .header-label {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .main-card,
+  .weather-card {
+    padding: 5px;
+  }
 }
